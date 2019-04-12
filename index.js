@@ -27,18 +27,20 @@ function showRepositories() {
 }
 
 function getCommits(el) {
-  const name = el.dataset.repo;
+  const username = el.name;
+  const reponame = el.dataset.repo;
   const req = new XMLHttpRequest();
   req.addEventListener('load', displayCommits);
-  req.open('GET', 'https://api.github.com/repos/octocat/' + name + '/commits');
+  req.open('GET', 'https://api.github.com/repos/'+username+'/' + reponame + '/commits');
   req.send();
 }
 
 function getBranches(el) {
-  const name = el.dataset.repo;
+  const username = el.name;
+  const reponame = el.dataset.repo;
   const req = new XMLHttpRequest();
   req.addEventListener('load', displayCommits);
-  req.open('GET', 'https://api.github.com/repos/octocat/' + name + '/commits');
+  req.open('GET', 'https://api.github.com/repos/'+username+'/' + reponame + '/commits');
   req.send();
 }
 
