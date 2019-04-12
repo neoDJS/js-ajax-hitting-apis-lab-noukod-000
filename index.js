@@ -15,6 +15,8 @@ function displayRepositories() {
       r =>
         '<li>' +
         r.name +
+        ' - ' + 
+        r.html_url + 
         '<br> - <a href="#" data-repo="' +
         r.name +
         '" data-user="' +
