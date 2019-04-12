@@ -17,14 +17,14 @@ function displayRepositories() {
         r.name +
         ' - ' +
         r.html_url +
-        '<br> - <a href="#" data-repo="' +
+        '<br> - <a href="#" data-repository="' +
         r.name +
-        '" data-user="' +
+        '" data-username="' +
         r.owner.login +
         '" onclick="getCommits(this)">Get Commits</a>'+
-        '<br> - <a href="#" data-repo="' +
+        '<br> - <a href="#" data-repository="' +
         r.name +
-        '" data-user="' +
+        '" data-username="' +
         r.owner.login +
         '" onclick="getBranches(this)">Get Branches</a></li>'
     )
@@ -33,8 +33,8 @@ function displayRepositories() {
 }
 
 function getCommits(el) {
-  const username = el.dataset.user;
-  const reponame = el.dataset.repo;
+  const username = el.dataset.username;
+  const reponame = el.dataset.repository;
   const req = new XMLHttpRequest();
   req.addEventListener('load', displayCommits);
   req.open('GET', 'https://api.github.com/repos/'+username+'/' + reponame + '/commits');
@@ -42,8 +42,8 @@ function getCommits(el) {
 }
 
 function getBranches(el) {
-  const username = el.dataset.user;
-  const reponame = el.dataset.repo;
+  const username = el.dataset.username;
+  const reponame = el.dataset.repository;
   const req = new XMLHttpRequest();
   req.addEventListener('load', displayBranches);
   req.open('GET', 'https://api.github.com/repos/'+username+'/' + reponame + '/branches');
