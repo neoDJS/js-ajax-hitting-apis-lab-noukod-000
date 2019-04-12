@@ -15,10 +15,10 @@ function displayRepositories() {
       r =>
         '<li>' +
         r.name +
-        ' - <a href="#" data-repo="' +
+        '<br> - <a href="#" data-repo="' +
         r.name +
-        '" onclick="getCommits(this)">Get Commits</a></li>'+
-        ' - <a href="#" data-repo="' +
+        '" onclick="getCommits(this)">Get Commits</a>'+
+        '<br> - <a href="#" data-repo="' +
         r.name +
         '" onclick="getBranches(this)">Get Branches</a></li>'
     )
