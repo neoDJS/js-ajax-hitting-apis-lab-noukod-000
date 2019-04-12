@@ -56,7 +56,7 @@ function displayCommits() {
         '</li>'
     )
     .join('')}</ul>`;
-  document.getElementById('commits').innerHTML = commitsList;
+  document.getElementById('details').innerHTML = commitsList;
 }
 
 function displayBranches() {
@@ -64,5 +64,5 @@ function displayBranches() {
   const branchesList = `<ul>${branches
     .map(branche => '<li>' + branche.name + '</li>')
     .join('')}</ul>`;
-  document.getElementById('commits').innerHTML = branchesList;
+  document.getElementById('details').innerHTML = branchesList;
 }
