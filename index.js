@@ -9,7 +9,7 @@ function getRepositories() {
 function displayRepositories() {
   //this is set to the XMLHttpRequest object that fired the event
   var repos = JSON.parse(this.responseText);
-  console.log(repos);
+  // console.log(repos);
   const repoList = `<ul>${repos
     .map(
       r =>
